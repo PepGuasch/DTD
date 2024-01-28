@@ -1,0 +1,29 @@
+<!DOCTYPE blog [
+<!ELEMENT blog (entrada+)>
+<!ELEMENT entrada (titulo, contenido, fecha, comentario, valoracion)>
+<!ATTLIST entrada
+autor CDATA #REQUIRED
+>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
+<!ATTLIST comentario
+id ID #REQUIRED
+puntuacion CDATA #IMPLIED
+>
+<!ELEMENT valoracion (#PCDATA)>
+<!ATTLIST valoracion
+estrellas CDATA #IMPLIED
+>
+]>
+
+<blog>
+    <entrada autor= "Pep">
+        <titulo>Mi Blog</titulo>
+        <contenido>Qualquier cosa</contenido>
+        <fecha>18/01/2024</fecha>
+        <comentario id ="90128342">Esto es un comentario</comentario>
+        <valoración estrellas="5">5 estrellas</valoración>
+    </entrada>
+</blog>

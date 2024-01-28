@@ -1,0 +1,23 @@
+<!DOCTYPE libro_electronico [
+<!ELEMENT libro_electronico (titulo, autor, capitulos+)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT capitulos (capitulo+)>
+<!ELEMENT capitulo (numero, titulo, contenido)>
+<!ATTLIST capitulo
+id ID #REQUIRED
+revisor CDATA #IMPLIED
+>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+]>
+
+<libro_electronico>
+    <titulo>El señor de los anillos</titulo>
+    <autor>Mi padre</autor>
+    <capitulos id=40>
+        <numero>40</numero>
+        <titulo>capitulo 40</titulo>
+        <contenido>Qualquier cosa</contenido>
+    </capitulos>
+</libro_electronico>

@@ -1,0 +1,29 @@
+<!DOCTYPE blog [
+<!ELEMENT blog (entrada+)>
+<!ELEMENT entrada (titulo, contenido, fecha, comentario, valoracion)>
+<!ATTLIST entrada
+autor CDATA #REQUIRED
+>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
+<!ATTLIST comentario
+id ID #REQUIRED
+puntuacion CDATA #IMPLIED
+>
+<!ELEMENT valoracion (#PCDATA)>
+<!ATTLIST valoracion
+estrellas CDATA #IMPLIED
+>
+]>
+
+<blog>
+    <entrada autor="J.K.R">
+        <titulo>Harry Potter</titulo>
+        <contenido>Era a ser una vez</contenido>
+        <fecha>18/01/2024</fecha>
+        <comentario id="502814">Esto es un comentario</comentario>
+        <valoracion estrellas="5">5 estrellas</valoracion>
+    </entrada>
+</blog>
